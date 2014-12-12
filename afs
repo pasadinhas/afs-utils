@@ -1,0 +1,13 @@
+#! /usr/bin/env php
+
+<?php
+
+use Symfony\Component\Console\Application;
+
+require 'vendor/autoload.php';
+
+$app = new Application("AFS utilities (by: Pasadinhas)", "1.0");
+
+$app->register("permissions");
+
+$app->run();
