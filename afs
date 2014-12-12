@@ -2,12 +2,13 @@
 
 <?php
 
+use Pasadinhas\Console\AFS\Commands\Permissions\ReadPermissionsCommand;
 use Symfony\Component\Console\Application;
 
 require 'vendor/autoload.php';
 
-$app = new Application("AFS utilities (by: Pasadinhas)", "1.0");
+$app = new Application("Andrew FileSystem utilities (by: Pasadinhas)", "1.0");
 
-$app->register("permissions");
+$app->add(new ReadPermissionsCommand);
 
 $app->run();

@@ -3,3 +3,8 @@ vendor/
 
 # PHPStorm IDE config folder
 .idea/
+
+# Vagrant
+install.sh
+Vagrantfile
+.vagrant/
