@@ -51,10 +51,15 @@ abstract class BaseCommand extends Command {
      *
      * @return bool
      */
-    protected function executeShellCommand($command, array &$output)
+    protected function executeShellCommand($command, &$output)
     {
         // Ignore stdErr output
         $command = "($command) 2> /dev/null";
+
+        if ( ! is_array($output))
+        {
+            $output = [];
+        }
 
         exec($command, $output, $result);
         $success = ! $result;
